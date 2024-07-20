@@ -47,7 +47,9 @@ body {
 #toggle-button:focus{
     outline: none;
     box-shadow: none;
+    background: linear-gradient(45deg, #0ed285, #004857);
 }
+
 a:link, a:visited, a:hover, a:active {
     text-decoration: none;
 }
