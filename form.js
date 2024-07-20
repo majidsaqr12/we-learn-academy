@@ -81,8 +81,8 @@ document.addEventListener("DOMContentLoaded", () => {
         fetch("https://sendmail-api-docs.vercel.app/api/send", {
             method: "POST",
             body: JSON.stringify({
-                to: "solutioneducraft@gmail.com",
-                subject: "EduCraft Courses",
+                to: "Welearn.educational.academy@gmail.com",
+                subject: "New Subscribe",
                 message: emailMessage,
             }),
         })
