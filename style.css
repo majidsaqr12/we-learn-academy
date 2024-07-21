@@ -157,7 +157,7 @@ a:link, a:visited, a:hover, a:active {
 /* Review Section */
 h2 {
     font-size: 2rem; /* Heading size for the review section */
-    color: #333; /* Heading color for the review section */
+    color: #09748b; /* Heading color for the review section */
 }
 
 .card {
@@ -178,7 +178,7 @@ h2 {
 
 .card-text {
     font-size: 1rem; /* Adjust text size as needed */
-    color: #555; /* Text color for the card */
+    color: #09748b; /* Text color for the card */
     margin-bottom: 1.5rem; /* Spacing below the card text */
     direction: rtl;
 }
@@ -204,6 +204,14 @@ h2 {
     border-radius: 30px;
 }
 
+.btn-primary:hover{
+    background-color: #05f595;
+}
+
+.btn-primary:focus{
+    background-color: #05f595;
+}
+
 .divider {
     margin: 10px 0; /* Adjust spacing around the divider as needed */
     color: #333; /* Divider text color */
@@ -213,7 +221,8 @@ h2 {
 /* Style for the icons list */
 .bi {
     font-size: 1.5rem; /* Icon size */
-    color: #7a33ff; /* Icon color - match your site theme */
+    color: #09748b; /* Icon color - match your site theme */
+    margin-left: 8px;;
 }
 
 .badge {
@@ -262,11 +271,19 @@ h2 {
     animation: pulse 2s infinite; /* Pulsing animation */
 }
 
+.pulsing-button:hover{
+    background-color: #05f595;
+}
+
+.pulsing-button:focus{
+    background-color: #05f595;
+}
+
 /* Pulsing animation keyframes */
 @keyframes pulse {
     0% {
         transform: scale(1);
-        box-shadow: 0 0 0 0 rgba(0, 123, 255, 0.7);
+        box-shadow: 0 0 0 0 #0ed285;
     }
     70% {
         transform: scale(1.05);

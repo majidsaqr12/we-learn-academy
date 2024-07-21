@@ -66,3 +66,5 @@ document.querySelectorAll('.product-item').forEach(item => {
         icons.classList.remove('show');
     });
 });
+
+

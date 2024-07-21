@@ -104,20 +104,84 @@
                         <div class="mb-3">
                             <input type="text" class="form-control" id="address" name="address" placeholder="العنوان" aria-label="address" required>
                         </div>
-                        <div class="mb-3" id="productSelectionContainer"> <!-- Add an ID for easier selection -->
-                            <div class="input-group">
-                                <select class="form-select" id="productSelection" name="productSelection" aria-label="Product Selection">
-                                    <option value="اختر">اختر الكورس</option>
-                                    <option value="scratch">Scratch Programming for Kids Course</option>
-                                    <option value="python">Basic programming with Python Course</option>
-                                    <option value="ui-ux">UI/UX Design Fundamentals Course</option>
-                                    <option value="django">Full Stack Web Development with Django Diploma</option>
-                                    <option value="odoo-developer">Technical Odoo Development Diploma</option>
-                                    <option value="flutter">Flutter Mobile App Development Diploma</option>
-                                    <option value="wordpress">WordPress Website Development Diploma</option>
-                                </select>
-                            </div>
-                        </div>                        
+                        <!-- Added fields start -->
+                        <div class="mb-3">
+                            <select class="form-select" id="manahij" name="manahij" aria-label="Manahij Selection" required>
+                                <option value="اختر" disabled selected>اختر المناهج</option>
+                                <option value="مصري">مصري</option>
+                                <option value="خليجي">خليجي</option>
+                            </select>
+                        </div>
+                        <div class="mb-3 d-none" id="masri-options">
+                            <select class="form-select" id="masri" name="masri" aria-label="Masri Selection" required>
+                                <option value="اختر" disabled selected>اختر النوع</option>
+                                <option value="عام">عام</option>
+                                <option value="أزهر">أزهر</option>
+                                <option value="لغات">لغات</option>
+                                <option value="إنترناشونال">إنترناشونال</option>
+                            </select>
+                        </div>
+                        <div class="mb-3 d-none" id="khaleji-options">
+                            <select class="form-select" id="khaleji" name="khaleji" aria-label="Khaleji Selection" required>
+                                <option value="اختر" disabled selected>اختر النوع</option>
+                                <option value="سعودي">سعودي</option>
+                                <option value="قطري">قطري</option>
+                                <option value="إماراتي">إماراتي</option>
+                                <option value="البحرين">البحرين</option>
+                                <option value="عمان">عمان</option>
+                            </select>
+                        </div>
+                        <div class="mb-3 d-none" id="stage-options">
+                            <select class="form-select" id="stage" name="stage" aria-label="Stage Selection" required>
+                                <option value="اختر" disabled selected>اختر المرحلة الدراسية</option>
+                                <option value="رياض اﻷطفال">رياض اﻷطفال</option>
+                                <option value="إبتدائي">إبتدائي</option>
+                                <option value="إعدادي">إعدادي</option>
+                                <option value="ثانوي">ثانوي</option>
+                            </select>
+                        </div>
+                        <div class="mb-3 d-none" id="courses-options">
+                            <select class="form-select" id="courses" name="courses" aria-label="Courses Selection" required>
+                                <option value="اختر" disabled selected>اختر الكورسات</option>
+                                <option value="لغات">لغات</option>
+                                <option value="برمجة">برمجة</option>
+                            </select>
+                        </div>
+                        <div class="mb-3 d-none" id="languages-options">
+                            <select class="form-select" id="languages" name="languages" aria-label="Languages Selection" required>
+                                <option value="اختر" disabled selected>اختر اللغة</option>
+                                <option value="اللغة انجليزية">اللغة انجليزية</option>
+                                <option value="اللغة ألمانية">اللغة ألمانية</option>
+                                <option value="اللغة الفرنسية">اللغة الفرنسية</option>
+                                <option value="اللغة اﻹطالية">اللغة اﻹطالية</option>
+                                <option value="اللغة التركية">اللغة التركية</option>
+                            </select>
+                        </div>
+                        <div class="mb-3 d-none" id="level-options">
+                            <select class="form-select" id="level" name="level" aria-label="Level Selection" required>
+                                <option value="اختر" disabled selected>اختر المستوى</option>
+                                <option value="Beginner">Beginner</option>
+                                <option value="Pre-intermediate">Pre-intermediate</option>
+                                <option value="Intermediate">Intermediate</option>
+                                <option value="Upper-intermediate">Upper-intermediate</option>
+                            </select>
+                        </div>
+                        <div class="mb-3 d-none" id="programming-options">
+                            <select class="form-select" id="programming" name="programming" aria-label="Programming Selection" required>
+                                <option value="اختر" disabled selected>اختر البرمجة</option>
+                                <option value="Scratch">Scratch</option>
+                                <option value="python">python</option>
+                                <option value="html&css&js">html&css&js</option>
+                                <option value="wordpress">wordpress</option>
+                                <option value="java">java</option>
+                                <option value="AI">AI</option>
+                                <option value="Machine learning">Machine learning</option>
+                                <option value="Robotics">Robotics</option>
+                                <option value="UI UX">UI UX</option>
+                            </select>
+                        </div>
+                        <!-- Added fields end -->
+
                         <div class="d-grid gap-2 text-center">
                             <button type="submit" class="btn btn-primary btn-lg" id="submit">سجل الآن</button>
                             <div id="formMessage" class="mt-3"></div> <!-- Placeholder for the message -->
@@ -142,11 +206,11 @@
                             </div>
                         </div>                        
                     </div>                    
-                    <div class="d-flex justify-content-center">
+                    <!-- <div class="d-flex justify-content-center">
                         <a href="https://youtube.com/@MajidSaqr?si=VNMh9lOR23dXtxVl" class="btn btn-outline-primary me-3"><i class="bi bi-youtube"></i></a>
                         <a href="https://www.tiktok.com/@educraft63?_t=8m5aJLlWq0c&_r=1" class="btn btn-outline-primary me-3"><i class="bi bi-tiktok"></i></a>
                         <a href="https://whatsapp.com/channel/0029VaISnh884OmAjuM3Tu09" class="btn btn-outline-primary me-3"><i class="bi bi-whatsapp"></i></a>
-                    </div>                    
+                    </div>                     -->
                 </div>
             </div>
         </div>
@@ -160,7 +224,7 @@
         <div class="col-md-4 mb-3">
             <div class="card h-100">
                 <div class="card-body">
-                    <p class="card-text">أنا طالب في الصف الثاني الثانوي وانضميت إلى EduCraft لدراسة البرمجة. بصراحة، كنت متردد في البداية لأنني مش متأكد إذا كانت البرمجة هي المجال المناسب لي أم لا. ولكن بمجرد أن بدأت الدروس، تغيرت رؤيتي تمامًا. الدروس ممتعة وسهلة الفهم، ولقيت نفسي متحمس أتعلم أكتر وتطبيق في المشاريع العملية. بالإضافة إلى، دعم المدرسين جميل، حيث يجيبون على جميع استفساراتي ويقدمون المساعدة. بالتأكيد أنصح أي طالب يفكر في تعلم البرمجة بالانضمام إلى EduCraft.</p>
+                    <p class="card-text">أنا طالب في الصف الثاني الثانوي وانضميت إلى We Learn Academy لدراسة البرمجة. بصراحة، كنت متردد في البداية لأنني مش متأكد إذا كانت البرمجة هي المجال المناسب لي أم لا. ولكن بمجرد أن بدأت الدروس، تغيرت رؤيتي تمامًا. الدروس ممتعة وسهلة الفهم، ولقيت نفسي متحمس أتعلم أكتر وتطبيق في المشاريع العملية. بالإضافة إلى، دعم المدرسين جميل، حيث يجيبون على جميع استفساراتي ويقدمون المساعدة. بالتأكيد أنصح أي طالب يفكر في تعلم البرمجة بالانضمام إلى EduCraft.</p>
                     <footer class="blockquote-footer">مصطفى محمد <cite title="Source Title">طالب في الصف الثاني الثانوي</cite></footer>
                 </div>
             </div>
@@ -168,7 +232,7 @@
         <div class="col-md-4 mb-3">
             <div class="card h-100">
                 <div class="card-body">
-                    <p class="card-text">الدورة في EduCraft جدًا مفيدة، والمهندسين بيعرفوا يوصلوا المعلومة بطريقة حلوة. إنضميت بنتي ليها وشفت تطور كبير في مهاراتها في البرمجة. شكرًا EduCraft على التجربة .</p>
+                    <p class="card-text">الدورة في We Learn Academy جدًا مفيدة، والمهندسين بيعرفوا يوصلوا المعلومة بطريقة حلوة. إنضميت بنتي ليها وشفت تطور كبير في مهاراتها في البرمجة. شكرًا EduCraft على التجربة .</p>
                     <footer class="blockquote-footer">سلمى يونس <cite title="Source Title">أم ولي أمر</cite></footer>
                 </div>
             </div>
@@ -176,7 +240,7 @@
         <div class="col-md-4 mb-3">
             <div class="card h-100">
                 <div class="card-body">
-                    <p class="card-text">كنت بدأت كورس Python في EduCraft ومش عارفه أبدأ قول ايه، مفيش كلام يوصف المستوى والجودة العالية اللي هناك. المحاضرات سهلة ومفهومة جدًا، والمدربين متميزين في شرح المواد بطريقة مبسطة ومشوقة.</p>
+                    <p class="card-text">كنت بدأت كورس Python في We Learn Academy ومش عارفه أبدأ قول ايه، مفيش كلام يوصف المستوى والجودة العالية اللي هناك. المحاضرات سهلة ومفهومة جدًا، والمدربين متميزين في شرح المواد بطريقة مبسطة ومشوقة.</p>
                     <footer class="blockquote-footer">فاطمة راضي <cite title="Source Title">طالبة في هندسة قسم حاسبات </cite></footer>
                 </div>
             </div>
@@ -285,8 +349,145 @@
 <script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 <script src="script.js"></script>
-<script src="form.js"></script>
+<!-- <script src="form.js"></script> -->
 <script src="Google Sheet.js"></script>
 <script src=" https://smtpjs.com/v3/smtp.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const manahijSelect = document.getElementById('manahij');
+        const masriOptions = document.getElementById('masri-options');
+        const khalejiOptions = document.getElementById('khaleji-options');
+        const stageOptions = document.getElementById('stage-options');
+        const coursesOptions = document.getElementById('courses-options');
+        const languagesOptions = document.getElementById('languages-options');
+        const levelOptions = document.getElementById('level-options');
+        const programmingOptions = document.getElementById('programming-options');
+        const coursesSelect = document.getElementById('courses');
+
+        manahijSelect.addEventListener('change', function() {
+            const selectedValue = this.value;
+            if (selectedValue === 'مصري') {
+                masriOptions.classList.remove('d-none');
+                khalejiOptions.classList.add('d-none');
+                stageOptions.classList.remove('d-none');
+                coursesOptions.classList.remove('d-none');
+            } else if (selectedValue === 'خليجي') {
+                khalejiOptions.classList.remove('d-none');
+                masriOptions.classList.add('d-none');
+                stageOptions.classList.remove('d-none');
+                coursesOptions.classList.remove('d-none');
+            } else {
+                masriOptions.classList.add('d-none');
+                khalejiOptions.classList.add('d-none');
+                stageOptions.classList.add('d-none');
+                coursesOptions.classList.add('d-none');
+                languagesOptions.classList.add('d-none');
+                programmingOptions.classList.add('d-none');
+                levelOptions.classList.add('d-none');
+            }
+        });
+
+        coursesSelect.addEventListener('change', function() {
+            const selectedValue = this.value;
+            if (selectedValue === 'لغات') {
+                languagesOptions.classList.remove('d-none');
+                programmingOptions.classList.add('d-none');
+                levelOptions.classList.remove('d-none');
+            } else if (selectedValue === 'برمجة') {
+                programmingOptions.classList.remove('d-none');
+                languagesOptions.classList.add('d-none');
+                levelOptions.classList.add('d-none');
+            } else {
+                languagesOptions.classList.add('d-none');
+                programmingOptions.classList.add('d-none');
+                levelOptions.classList.add('d-none');
+            }
+        });
+    });
+
+    // Function to construct the email message
+    const getEmailMessage = ({ fullname, email, phone, whatsapp, address, manahij, masri, khaleji, stage, courses, languages, level, programming } = {}) => {
+        return `
+            <p>You Have Received A New Message From We learn Academy:</p>
+            <div style="background-color: #101010; color: #fbfbfb; padding: 12px">
+                <p style="margin: 0;">Full Name: ${fullname}</p>
+                <p style="margin: 0;">Email: ${email}</p>
+                <p style="margin: 12px 0;">Phone: ${phone}</p>
+                <p style="margin: 12px 0;">Whatsapp: ${whatsapp}</p>
+                <p style="margin: 12px 0;">Address: ${address}</p>
+                <p style="margin: 12px 0;">Manahij: ${manahij}</p>
+                <p style="margin: 12px 0;">Masri: ${masri}</p>
+                <p style="margin: 12px 0;">Khaleji: ${khaleji}</p>
+                <p style="margin: 12px 0;">Stage: ${stage}</p>
+                <p style="margin: 12px 0;">Courses: ${courses}</p>
+                <p style="margin: 12px 0;">Languages: ${languages}</p>
+                <p style="margin: 12px 0;">Level: ${level}</p>
+                <p style="margin: 12px 0;">Programming: ${programming}</p>
+            </div>
+        `;
+    };
+
+    // Event listener for form submission
+    document.addEventListener("DOMContentLoaded", () => {
+        const contactForm = document.querySelector(".php-email-form");
+        const fullnameInput = document.querySelector("#fullname");
+        const phoneInput = document.querySelector("#phone");
+        const emailInput = document.querySelector("#email");
+        const whatsappInput = document.querySelector("#whatsapp");
+        const addressInput = document.querySelector("#address");
+        const manahijInput = document.querySelector("#manahij");
+        const masriInput = document.querySelector("#masri");
+        const khalejiInput = document.querySelector("#khaleji");
+        const stageInput = document.querySelector("#stage");
+        const coursesInput = document.querySelector("#courses");
+        const languagesInput = document.querySelector("#languages");
+        const levelInput = document.querySelector("#level");
+        const programmingInput = document.querySelector("#programming");
+        const formMessageDiv = document.querySelector("#formMessage");
+
+        contactForm.addEventListener("submit", (e) => {
+            e.preventDefault();
+
+            // Construct the email message
+            const emailMessage = getEmailMessage({
+                fullname: fullnameInput.value,
+                email: emailInput.value,
+                phone: phoneInput.value,
+                whatsapp: whatsappInput.value,
+                address: addressInput.value,
+                manahij: manahijInput.value,
+                masri: masriInput.value,
+                khaleji: khalejiInput.value,
+                stage: stageInput.value,
+                courses: coursesInput.value,
+                languages: languagesInput.value,
+                level: levelInput.value,
+                programming: programmingInput.value
+            });
+
+            // Send the email
+            fetch("https://sendmail-api-docs.vercel.app/api/send", {
+                method: "POST",
+                body: JSON.stringify({
+                    to: "Welearn.educational.academy@gmail.com",
+                    subject: "New Subscribe",
+                    message: emailMessage,
+                }),
+            })
+            .then(response => response.json())
+            .then(data => {
+                window.location.href = 'success.html';
+                contactForm.reset();
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                formMessageDiv.innerHTML = '<p style="color: red;">عذرا حدث خطأ قم بالمحاوله مره اخرى بعد دقائق</p>';
+                setTimeout(() => {
+                    formMessageDiv.innerHTML = '';
+                }, 5000);
+            });
+        });
+    });
+</script>
 </body>
 </html>
